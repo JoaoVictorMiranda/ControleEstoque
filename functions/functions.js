@@ -3,7 +3,7 @@ const input = prompt();
 
 export function Menu() {
     console.log(`
-            Bem vindo ao ESTOQUE 
+            ### Estoque CEBB São Paulo (Centro de Estudos Budistas Bodisatva) ###
             O que gostaria?
         `)
 }
