@@ -10,33 +10,29 @@ let verificar = true;
 while (verificar) {
     Function.Menu();
     let Resp = Function.PerguntarMensagem("Qual deseja? ", "Number");
-    switch (Resp) {
-        case 1:
-            Function.ListarEstoque();
-            break;
-        case 2:
-            // Adicionar produto
-            break;
-        case 3:
-            //Remover Produto
-            break;
-        case 4:
-            //Deletar produto
-            break;
-        case 0:
-            Function.Deletar();
-            Function.sleep(500);
-            Function.Finalizar();
-            verificar = false;
-        //SAIR
+        switch (Resp) {
+            case 1:
+                //Cadastrar produto
+                Function.CadastrarProduto();
+                break;
+            case 2:
+                //Listar Produto
+                Function.ListarEstoque();
+                break;
+            case 3:
+                //Adicionar produto ao estoque
+                break;
+            case 4:
+                //Remover produto do estoque
+                break;
+            case 5:
+                //Deletar produto do estoque
+                break;
+            case 0:
+                Function.Deletar();
+                Function.sleep(500);
+                Function.Finalizar();
+                verificar = false;
+            //SAIR
+        }
     }
-}
-
-
-/* ✅ Cadastrar produto
-✅ Listar produtos
-✅ Adicionar ao estoque
-✅ Retirar do estoque
-✅ Apagar produto
-✅ Sair do program */
-
