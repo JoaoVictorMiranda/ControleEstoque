@@ -44,22 +44,101 @@ export async function sleep(ms) {
         setTimeout(ok, ms);
     });
 }
-
-
-
-export function CadastrarProduto() {
-
-
-}
-
-
-
 //Itera por todos os objetos E retorna seu nome e a quantidade
 export function ListarEstoque() {
+    console.log("Catálogo:\n");
+    let i = 0;
     for (let item of estoque) {
-        console.log(item.Nome, item.QtProduto);
+        console.log(`[${i}] 🔹 ${item.Nome} — Quantidade: ${item.QtProduto}`);
+        i++;
     }
+    PerguntarMensagem("Aperte entar para continuar...", "Texto");
+
 }
+export function ListarEstoqueGeral() {
+    for (let item of estoque) {
+        console.log(item)
+    }
+    PerguntarMensagem("Aperte entar para continuar...", "Texto");
+}
+
+
+
+
+//Cadastra o produto diretamente com o PUSH ja com as perguntas diretamente direcionadas
+export function CadastrarProduto() {
+    Deletar();
+    console.log(`Iremos cadastrar seu produto esta pronto? `);
+    PerguntarMensagem("Enter para continuar...", "Texto");
+
+    estoque.push({
+        Nome: PerguntarMensagem("QUal o nome do Produto? ", "Texto"),
+        Descricao: PerguntarMensagem("Qual a descrição dele? ", "Texto"),
+        preco: PerguntarMensagem("Por quanto ira vender? ", "Number"),
+        Finalidade: PerguntarMensagem("Para qual finalidade ele devera ser usado? ", "Texto"),
+        Material: PerguntarMensagem("Quais materias incriveis ele possui? ", "Texto"),
+        Origem: PerguntarMensagem("QUal a origem dele? ", "Texto"),
+        Fabricacao: PerguntarMensagem("Qual ano de fabricação? ", "Number"),
+        Categoria: PerguntarMensagem("Onde ele se encaixa nas categorias? ", "Texto"),
+        EstadoDeConservacao: PerguntarMensagem("Em qual estado ele se encontra? ", "Texto"),
+        QtProduto: PerguntarMensagem("Quantidade por favor: ", "Number"),
+    })
+    let n = 0
+    for (let item of estoque) {
+        n++
+    }
+    console.log(`Veja se esta certo.`);
+    console.log(estoque[n - 1])
+    //Possivel Loop para adicionar mais de um item de uma vez
+    console.log(`Gostaria de cadastrar mais um? 
+        1. Sim
+        0. Não
+        `)
+    let Novamente = PerguntarMensagem(":", "Number");
+    if (Novamente == 1) {
+        CadastrarProduto();
+    }
+};
+
+
+
+
+
+export function AdicionarProduto() {
+    Deletar();
+    ListarEstoque();
+    let adicionar = PerguntarMensagem("Qual Produto gostaria de adicionar mais? ", "Number");
+    let QTD = PerguntarMensagem("Quanto gostaria de adicionar:  ", "Number")
+    estoque[adicionar].QtProduto += QTD;
+    ListarEstoque();
+    PerguntarMensagem("Pressione enter para continuar...");
+}
+
+
+export function RemoverProduto() {
+    Deletar();
+    ListarEstoque();
+    let remover = PerguntarMensagem("Qual produto gostaria de remover? ", "Number");
+    let QTD = PerguntarMensagem("QUal a quantidade a ser removida: ", "Number");
+    estoque[remover].QtProduto -= QTD;
+    ListarEstoque();
+    PerguntarMensagem("Pressione enter para continuar...");
+}
+
+
+export function DeletarProduto() {
+    Deletar();
+    ListarEstoque();
+    let delet = PerguntarMensagem("Qual gostaria de deletar?", "NUmber");
+    if (delet >= 0 && delet < estoque.length) {
+        estoque.splice(delet, 1);
+        console.log("Item removido com sucesso.");
+    } else {
+        console.log("Índice inválido. Nenhum item foi removido.");
+    }
+    ListarEstoque();
+}
+
 
 
 
@@ -68,6 +147,7 @@ let estoque = [
     {
         Nome: "Coração de Éter Sussurrante",
         Descricao: "Unidade energética ancestral usada para dar 'vida' ao núcleo de autômatos sensitivos.",
+        preco: 3500.55,
         Finalidade: "Animação de Núcleo",
         Material: "Cristal de Vapor",
         Origem: "Câmara Silenciosa de Grimwald",
@@ -97,17 +177,3 @@ let Frases = [
     "A Catedral das Molas Partidas",
     "O Último Suspiro do Pistão"
 ];
-
-
-
-/* 
-id
-Nome
-Finalidade na máquina
-Material 
-origem
-Ano de fabricação (ou reconstrução)
-Categoria
-Estado de conservação (novo, restaurado, obsoleto, amaldiçoado?)
-Quantidade disponível
-*/
