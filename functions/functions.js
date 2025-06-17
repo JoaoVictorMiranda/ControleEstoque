@@ -155,7 +155,67 @@ let estoque = [
         Categoria: "Raro",
         EstadoDeConservacao: "Estável",
         QtProduto: 2
+    }, {
+        Nome: "Lente de Vislumbre Temporal",
+        Descricao: "Permite ao autômato prever trajetórias mecânicas futuras com precisão absurda.",
+        preco: 1280.00,
+        Finalidade: "Antecipação de Movimento",
+        Material: "Vidro Élfico Refratado",
+        Origem: "Laboratório Subterrâneo de Luthen Kaal",
+        Fabricacao: 1897,
+        Categoria: "Único",
+        EstadoDeConservacao: "Frágil",
+        QtProduto: 1
+    },
+    {
+        Nome: "Engrenagem de Sangue Negro",
+        Descricao: "Peça de ligação central que retém memória mecânica de gerações de uso.",
+        preco: 212.75,
+        Finalidade: "Memória Mecânica",
+        Material: "Ferro Vivo",
+        Origem: "Minas Abissais de Ul'Dakar",
+        Fabricacao: 1784,
+        Categoria: "Fundamental",
+        EstadoDeConservacao: "Oxidada",
+        QtProduto: 6
+    },
+    {
+        Nome: "Chave Cantante de Kirell",
+        Descricao: "Dispositivo de ativação que emite uma frequência harmônica específica.",
+        preco: 987.90,
+        Finalidade: "Ativação de Mecanismos",
+        Material: "Latão Sonoro",
+        Origem: "Templo Sonoro de Kirell",
+        Fabricacao: 1811,
+        Categoria: "Funcional",
+        EstadoDeConservacao: "Perfeita",
+        QtProduto: 3
+    },
+    {
+        Nome: "Válvula de Névoa Densa",
+        Descricao: "Permite o controle fino de fluxo de vapor em ambientes úmidos e instáveis.",
+        preco: 425.00,
+        Finalidade: "Regulação de Pressão",
+        Material: "Aço Alquímico",
+        Origem: "Estaleiro Oculto de Nebriss",
+        Fabricacao: 1860,
+        Categoria: "Comum",
+        EstadoDeConservacao: "Boa",
+        QtProduto: 10
+    },
+    {
+        Nome: "Fio de Ouro Arcano",
+        Descricao: "Conduz não apenas energia, mas intenção — usado em interfaces sensitivas.",
+        preco: 1700.00,
+        Finalidade: "Transmissão de Intenção",
+        Material: "Ouro Trançado com Filigrana Mágica",
+        Origem: "Ateliê da Rosa Vazia",
+        Fabricacao: 1901,
+        Categoria: "Raro",
+        EstadoDeConservacao: "Intacto",
+        QtProduto: 4
     }
+
 ];
 
 
