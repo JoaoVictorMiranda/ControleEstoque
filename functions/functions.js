@@ -4,16 +4,18 @@ const input = prompt();
 
 export function Menu() {
     console.log(`
-            ### ${chalk.bgYellow.bold.white('A Oficina Submersa de Elias Grimwald – Sussurros do Relicário de Vapor')} ###
-                    ${GerarFrase()}
-            1. Cadastrar Produto
-            2. Listar Todo o estoque
-            3. Adicionar produto ao estoque
-            4. Remover produto do estoque
-            5. Deletar produto do estoque
-            0. Sair
-        `)
+${chalk.bold('>> A Oficina Submersa de Elias Grimwald – Sussurros do Relicário de Vapor <<')}
+                ${chalk.bold.dim(GerarFrase())}
+
+${chalk.yellow('1.')} ${chalk.white('Cadastrar Produto')}
+${chalk.yellow('2.')} ${chalk.white('Listar Todo o estoque')}
+${chalk.yellow('3.')} ${chalk.white('Adicionar produto ao estoque')}
+${chalk.yellow('4.')} ${chalk.white('Remover produto do estoque')}
+${chalk.yellow('5.')} ${chalk.white('Deletar produto do estoque')}
+${chalk.red('0.')} ${chalk.white('Sair')}
+    `);
 }
+
 
 
 
@@ -34,10 +36,11 @@ export function Deletar() {
 }
 
 export function Finalizar() {
-    console.log(`Muito obrigado por usar ficaremos muito gratos por voce ter vindo 
-        Lembre-se Não conte a ninguem onde ficamos 
-        ${GerarFrase()}`);
+    console.log(`${chalk.greenBright('Muito obrigado por usar, ficaremos muito gratos por você ter vindo.')}
+${chalk.gray('Lembre-se:')} ${chalk.redBright.bold('Não conte a ninguém onde ficamos.')}
+${chalk.italic.cyan(GerarFrase())}`);
 }
+
 
 //Sleep basico pra fazer FRUFRU de esperar até abrir.
 export async function sleep(ms) {
