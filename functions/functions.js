@@ -1,9 +1,10 @@
 import prompt from 'prompt-sync';
+import chalk from 'chalk';
 const input = prompt();
 
 export function Menu() {
     console.log(`
-            ### A Oficina Submersa de Elias Grimwald – Sussurros do Relicário de Vapor ###
+            ### ${chalk.bgYellow.bold.white('A Oficina Submersa de Elias Grimwald – Sussurros do Relicário de Vapor')} ###
                     ${GerarFrase()}
             1. Cadastrar Produto
             2. Listar Todo o estoque
