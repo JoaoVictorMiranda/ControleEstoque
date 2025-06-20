@@ -243,19 +243,27 @@ let estoque = [
 
 
 export function GerarFrase() {
-    let math = Math.floor(Math.random() * 10);
-    return Frases[math]
+    let math = Math.floor(Math.random() * Frases.length);
+    return Frases[math];
 }
 
+
 let Frases = [
-    "O Berço das Engrenagens",
-    "A Oficina Submersa",
-    "A Forja Silenciosa",
-    "Sussurros de Bronze",
-    "O Relicário do Vapor",
-    "Oficina das Almas Ocultas",
-    "O Útero do Aço",
-    "O Coração das Máquinas Cansadas",
-    "A Catedral das Molas Partidas",
-    "O Último Suspiro do Pistão"
+    "O Berço das Engrenagens onde tudo começou, antes mesmo da primeira faísca",
+    "A Oficina Submersa nas lágrimas do tempo, onde as máquinas sonham em silêncio",
+    "A Forja Silenciosa que ainda pulsa sob a montanha esquecida",
+    "Sussurros de Bronze entre estantes empoeiradas e memórias lubrificadas",
+    "O Relicário do Vapor onde cada peça tem alma e cada alma pesa em ferro",
+    "A Oficina das Almas Ocultas, proibida até mesmo aos inventores mais ousados",
+    "O Útero do Aço onde nascem as criações que desafiam o tempo e a razão",
+    "O Coração das Máquinas Cansadas, ainda batendo após séculos de esquecimento",
+    "A Catedral das Molas Partidas onde até o tempo range ao caminhar",
+    "O Último Suspiro do Pistão que outrora moveu reinos e hoje repousa em ferrugem",
+    "O Véu de Fuligem sob o qual as engrenagens sussurram segredos perdidos",
+    "O Santuário das Chaves Desalinhadas, guardião das peças que ninguém mais recorda",
+    "O Arsenal da Melancolia Mecânica, onde cada peça carrega uma derrota",
+    "A Sala de Recalibração da Eternidade, onde autômatos aprendem a morrer devagar",
+    "A Banca dos Itens Proibidos, onde peças amaldiçoadas trocam de mãos silenciosas",
+    "O Poço das Engrenagens Esquecidas, lar das invenções que falharam em viver"
 ];
+
