@@ -60,10 +60,28 @@ export function ListarEstoque() {
 
 }
 export function ListarEstoqueGeral() {
+    console.log("📦 ESTOQUE DETALHADO:\n");
+
+    let i = 0;
     for (let item of estoque) {
-        console.log(item)
+        console.log(` ${chalk.bgBlack.white("--------------------------------")} `);
+        console.log(`Item [${i}]`);
+        console.log(`Nome: ${item.Nome}`);
+        console.log(`Descrição: ${item.Descricao}`);
+        console.log(`Preço: R$ ${item.preco.toFixed(2)}`);
+        console.log(`Finalidade: ${item.Finalidade}`);
+        console.log(`Material: ${item.Material}`);
+        console.log(`Origem: ${item.Origem}`);
+        console.log(`Fabricação: ${item.Fabricacao}`);
+        console.log(`Categoria: ${item.Categoria}`);
+        console.log(`Estado de Conservação: ${item.EstadoDeConservacao}`);
+        console.log(`Quantidade: ${item.QtProduto}`);
+        console.log(` ${chalk.bgBlack.white("--------------------------------")} `);
+        console.log(chalk.bold.gray("Proximo"));
+        i++;
     }
-    PerguntarMensagem("Aperte entar para continuar...", "Texto");
+
+    PerguntarMensagem("Aperte Enter para continuar...", "Texto");
 }
 
 
